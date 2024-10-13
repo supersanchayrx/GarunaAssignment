@@ -1,23 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // To handle exiting to a different scene
+using UnityEngine.SceneManagement; 
 
 public class GazeInteraction : MonoBehaviour
 {
-    public Image gazeProgressImage; // UI Image to show the gaze progress (optional)
-    public float gazeDuration = 2f; // Time in seconds to trigger interaction
+    public Image gazeProgressImage; // coundlt find the files in figma
+    public float gazeDuration = 2f; // how long will it take to exit the gaze button
 
     private float gazeTimer = 0f;
     private bool isGazing = false;
 
-    // Call this when the gaze enters the button
+    // into init
     public void StartGaze()
     {
         Debug.Log("gaze start");
         isGazing = true;
     }
 
-    // Call this when the gaze exits the button
+    // exiting init
     public void StopGaze()
     {
         isGazing = false;
@@ -36,7 +36,7 @@ public class GazeInteraction : MonoBehaviour
 
             if (gazeTimer >= gazeDuration)
             {
-                ExitVRMode(); // Trigger exit when gaze time is met
+                ExitVRMode();
             }
         }
     }
@@ -45,16 +45,16 @@ public class GazeInteraction : MonoBehaviour
     {
         if (gazeProgressImage != null)
         {
-            gazeProgressImage.fillAmount = progress; // Update progress bar if applicable
+            gazeProgressImage.fillAmount = progress; // couldnt find the designs files for gaze button transitions and animations
         }
     }
 
     private void ExitVRMode()
     {
-        // Logic to exit VR mode or go to dashboard
+        // quit vr
         Debug.Log("Exiting VR Mode...");
         SceneManager.LoadScene("Dashboard");
-        // For example, you can load a different scene or quit the app
+        
         //SceneManager.LoadScene("DashboardScene"); // Replace with your actual dashboard scene
     }
 }

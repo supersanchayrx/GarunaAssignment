@@ -38,8 +38,8 @@ public class DataStorage : MonoBehaviour
 
     private void SaveUserData()
     {
-        string json = JsonUtility.ToJson(user);  // Convert userData to JSON
-        File.WriteAllText(filePath, json);  // Write the JSON string to a file
+        string json = JsonUtility.ToJson(user);  // converting to json
+        File.WriteAllText(filePath, json);  // json saved to file
         Debug.Log("Data saved to " + filePath);
     }
 

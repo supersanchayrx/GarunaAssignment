@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class OrientationManager : MonoBehaviour
 {
+    //for forced orientations during different scenes
+
     CreatePlayer createPlayerScript;
 
     private void Awake()
@@ -11,7 +13,6 @@ public class OrientationManager : MonoBehaviour
         createPlayerScript = GameObject.Find("PrefabInstatiator").GetComponent<CreatePlayer>();
 
     }
-    // Call this method to switch to landscape mode
 
     private void Start()
     {
@@ -41,7 +42,6 @@ public class OrientationManager : MonoBehaviour
         Screen.autorotateToPortraitUpsideDown = false;
     }
 
-    // Call this method to switch to portrait mode
     public void SetPortrait()
     {
         Screen.orientation = ScreenOrientation.Portrait;
@@ -52,7 +52,7 @@ public class OrientationManager : MonoBehaviour
         Debug.Log("Potrait");
     }
 
-    // Optionally, call this to enable auto-rotation if needed
+    
     public void EnableAutoRotation()
     {
         Screen.orientation = ScreenOrientation.AutoRotation;

@@ -7,12 +7,16 @@ public class Progress : MonoBehaviour
     GameObject successPanel, failurePanel, processingPanel, dialogTextPanel;
     private Coroutine vrChangeCoroutine;
 
+    SceneTracker sceneTrackerScript;
+
+    //to track progress
     private void Awake()
     {
         successPanel = GameObject.Find("Success");
         failurePanel = GameObject.Find("Failed");
         processingPanel = GameObject.Find("Processing");
         dialogTextPanel = GameObject.Find("DialogBoxGrp");
+        sceneTrackerScript = GameObject.Find("SceneTracker").GetComponent<SceneTracker>();
     }
 
     private void Start()
@@ -22,6 +26,11 @@ public class Progress : MonoBehaviour
         processingPanel.SetActive(false);
 
         activatePanel(0);
+
+        if(sceneTrackerScript.LastScene== "CloudScene" || sceneTrackerScript.LastScene == "EnvSelection" || sceneTrackerScript.LastScene == "EnvScene" || sceneTrackerScript.LastScene == "RoomScene" || sceneTrackerScript.LastScene == "VoidScene")
+        {
+            activatePanel(2);
+        }
     }
 
     public void activatePanel(int number)
@@ -63,7 +72,7 @@ public class Progress : MonoBehaviour
         if (vrChangeCoroutine != null)
         {
             StopCoroutine(vrChangeCoroutine);
-            vrChangeCoroutine = null; // Reset after stopping
+            vrChangeCoroutine = null; 
             Debug.Log("VR scene change stopped");
         }
     }

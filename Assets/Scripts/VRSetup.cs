@@ -21,8 +21,8 @@ public class VRSetup : MonoBehaviour
 
     public void InitializeVR()
     {
-        // Add your VR initialization code here, like enabling VR settings
-        // Example:
+        //enabling vr
+
         //UnityEngine.XR.XRSettings.LoadDeviceByName("Cardboard");
         //UnityEngine.XR.XRSettings.enabled = true;
         SetVRFullScreen();
@@ -36,7 +36,7 @@ public class VRSetup : MonoBehaviour
                 XRDisplaySubsystem displaySubsystem = xrManager.activeLoader.GetLoadedSubsystem<XRDisplaySubsystem>();
                 if (displaySubsystem != null && !displaySubsystem.running)
                 {
-                    displaySubsystem.Start();  // Enable VR
+                    displaySubsystem.Start();  
                 }
             }
         }
@@ -47,7 +47,7 @@ public class VRSetup : MonoBehaviour
 
     private void disableVr()
     {
-        // Disable VR settings if needed when exiting the scene
+        // disabling vr
         //UnityEngine.XR.XRSettings.enabled = false;
 
         XRGeneralSettings xrGeneralSettings = XRGeneralSettings.Instance;
@@ -59,7 +59,7 @@ public class VRSetup : MonoBehaviour
                 XRDisplaySubsystem displaySubsystem = xrManager.activeLoader.GetLoadedSubsystem<XRDisplaySubsystem>();
                 if (displaySubsystem != null && displaySubsystem.running)
                 {
-                    displaySubsystem.Stop();  // Disable VR
+                    displaySubsystem.Stop();  
                 }
             }
         }
@@ -70,6 +70,7 @@ public class VRSetup : MonoBehaviour
 
     void SetVRFullScreen()
     {
+        //sometimes the phone was misaligning the center point so custom resolution set 
         Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
     }
 

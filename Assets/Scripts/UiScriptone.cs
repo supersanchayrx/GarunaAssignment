@@ -126,7 +126,7 @@ public class UiScriptone : MonoBehaviour
     {
         if (this.tag == "loadingCircle")
         {
-            LeanTween.cancel(rTransform.gameObject);  // Cancels the rotation}
+            LeanTween.cancel(rTransform.gameObject);  
         }
     }
 
