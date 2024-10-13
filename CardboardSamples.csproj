@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E61CD9A7-404B-598C-A8E5-A8FD41CB6C1B}</ProjectGuid>
+    <ProjectGuid>{54873B4E-709B-83F9-436B-818034FF4444}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>CardboardSamples</AssemblyName>

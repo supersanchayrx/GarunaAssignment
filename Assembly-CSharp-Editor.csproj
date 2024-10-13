@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7D089056-DF58-E982-9066-656F110FA6EA}</ProjectGuid>
+    <ProjectGuid>{1938F630-7F27-7A49-91DD-72D1773EF6DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1251,11 +1251,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{03E43D24-3F6D-1964-AF10-0170713573CD}</Project>
+      <Project>{4FD0CC6D-8F6D-5EBD-BA24-0EE7B4F1A39D}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="CardboardSamples.csproj">
-      <Project>{E61CD9A7-404B-598C-A8E5-A8FD41CB6C1B}</Project>
+      <Project>{54873B4E-709B-83F9-436B-818034FF4444}</Project>
       <Name>CardboardSamples</Name>
     </ProjectReference>
   </ItemGroup>
